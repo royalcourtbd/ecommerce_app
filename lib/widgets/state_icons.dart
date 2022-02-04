@@ -2,15 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SetBottomNavIcon extends StatelessWidget {
+class StateIcons extends StatelessWidget {
   final String assetImage;
-  final int index;
-  final int currentIndex;
-  SetBottomNavIcon({
-    required this.assetImage,
-    required this.index,
-    required this.currentIndex,
-  });
+
+  final bool isSelected;
+  StateIcons({required this.assetImage, this.isSelected = false});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +14,7 @@ class SetBottomNavIcon extends StatelessWidget {
       'assets/images/$assetImage',
       height: 30.h,
       width: 30.w,
-      color: index == currentIndex ? const Color(0xfffe516c) : Colors.black,
+      color: isSelected ? const Color(0xfffe516c) : Colors.black,
     );
   }
 }

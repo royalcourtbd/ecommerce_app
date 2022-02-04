@@ -2,7 +2,7 @@ import 'package:ecommerce_app/pages/categories/categories_page.dart';
 import 'package:ecommerce_app/pages/main_page/main_page.dart';
 import 'package:ecommerce_app/pages/profile_page/profile_page.dart';
 
-import 'package:ecommerce_app/widgets/set_bottom_nav_icon.dart';
+import 'package:ecommerce_app/widgets/state_icons.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -42,26 +42,23 @@ class _HomePageState extends State<HomePage> {
         //type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-            icon: SetBottomNavIcon(
+            icon: StateIcons(
               assetImage: 'homepage.png',
-              index: 0,
-              currentIndex: currentIndex,
+              isSelected: 0 == currentIndex,
             ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: SetBottomNavIcon(
+            icon: StateIcons(
               assetImage: 'categories_icon.png',
-              index: 1,
-              currentIndex: currentIndex,
+              isSelected: 1 == currentIndex,
             ),
             label: 'Categories',
           ),
           BottomNavigationBarItem(
-            icon: SetBottomNavIcon(
+            icon: StateIcons(
               assetImage: 'account_icon.png',
-              index: 2,
-              currentIndex: currentIndex,
+              isSelected: 3 == currentIndex,
             ),
             label: 'Account',
           ),
